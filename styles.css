@@ -1,18 +1,19 @@
 /* ==========================================================
    PUNTO CERO — Landing Page
-   Paleta: azul profundo (tecnología/confianza) + celeste/verde
-   acento (conectividad). Tipografía: Inter (Google Fonts).
+   Paleta de marca: carbón + naranja + crema (logo Punto Cero). Tipografía: Inter (Google Fonts).
    ========================================================== */
 
 :root {
-  --color-bg: #0b1220;
-  --color-bg-alt: #0f1a2e;
-  --color-surface: #121e33;
-  --color-primary: #1e6fe0;
-  --color-primary-dark: #144e9e;
-  --color-accent: #22c3a6;
-  --color-text: #eef2f8;
-  --color-text-muted: #a7b3c6;
+  --color-bg: #1c1e1d;
+  --color-bg-alt: #232625;
+  --color-surface: #2b2e2c;
+  --color-primary: #d24619;
+  --color-primary-dark: #b93d14;
+  --color-accent: #e4501e;
+  --color-cream: #efece1;
+  --color-ink: #222423;
+  --color-text: #f4f1e8;
+  --color-text-muted: #b8b4a7;
   --color-border: rgba(255, 255, 255, 0.08);
 
   --font-base: 'Inter', system-ui, -apple-system, sans-serif;
@@ -67,8 +68,8 @@ ul { list-style: none; }
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--color-accent), #1aa88f);
-  color: #06231d;
+  background: linear-gradient(135deg, #d94a1b, #b93d14);
+  color: #fff;
   box-shadow: var(--shadow-sm);
 }
 .btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
@@ -93,14 +94,14 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 18, 32, 0.85);
+  background: rgba(239, 236, 225, 0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition), background var(--transition);
 }
 .header--scrolled {
-  border-bottom-color: var(--color-border);
-  background: rgba(11, 18, 32, 0.97);
+  border-bottom-color: rgba(34, 36, 35, 0.14);
+  background: rgba(239, 236, 225, 0.99);
 }
 
 .header__inner {
@@ -122,7 +123,7 @@ ul { list-style: none; }
 }
 .logo__icon { font-size: 1.4rem; }
 .logo__text strong { color: var(--color-accent); }
-/* .logo__img { height: 40px; } */ /* usar si se sube un logo real */
+.logo__img { height: 54px; width: auto; }
 
 .nav {
   display: flex;
@@ -162,8 +163,8 @@ ul { list-style: none; }
   align-items: center;
   padding: 60px 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(30, 111, 224, 0.35), transparent 55%),
-    radial-gradient(circle at 80% 30%, rgba(34, 195, 166, 0.25), transparent 50%),
+    radial-gradient(circle at 20% 20%, rgba(228, 80, 30, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(228, 80, 30, 0.25), transparent 50%),
     linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
   overflow: hidden;
 }
@@ -176,12 +177,12 @@ ul { list-style: none; }
   display: inline-block;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(34, 195, 166, 0.15);
+  background: rgba(228, 80, 30, 0.15);
   color: var(--color-accent);
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  border: 1px solid rgba(34, 195, 166, 0.3);
+  border: 1px solid rgba(228, 80, 30, 0.3);
 }
 
 .hero__title {
@@ -275,7 +276,7 @@ ul { list-style: none; }
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(34, 195, 166, 0.4);
+  border-color: rgba(228, 80, 30, 0.4);
 }
 .card__icon {
   font-size: 2rem;
@@ -284,7 +285,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(30, 111, 224, 0.15);
+  background: rgba(228, 80, 30, 0.15);
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
 }
@@ -346,7 +347,7 @@ ul { list-style: none; }
 .contact__icon {
   width: 42px; height: 42px;
   border-radius: var(--radius-sm);
-  background: rgba(34, 195, 166, 0.15);
+  background: rgba(228, 80, 30, 0.15);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.1rem; flex-shrink: 0;
 }
@@ -384,7 +385,7 @@ ul { list-style: none; }
 
 /* ---------- Footer ---------- */
 .footer {
-  background: #070c17;
+  background: #141615;
   padding-top: 60px;
   border-top: 1px solid var(--color-border);
 }
@@ -423,7 +424,7 @@ ul { list-style: none; }
   right: 24px;
   width: 58px;
   height: 58px;
-  background: linear-gradient(135deg, #22c3a6, #1aa88f);
+  background: linear-gradient(135deg, #25d366, #1ebe5a);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -483,3 +484,27 @@ ul { list-style: none; }
 .nav__toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav__toggle--open span:nth-child(2) { opacity: 0; }
 .nav__toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ---------- Marca: header crema, logo y detalles ---------- */
+.header .nav__link { color: #3b3e3c; }
+.header .nav__link:hover { color: var(--color-primary); }
+.header .nav__toggle span { background: var(--color-ink); }
+.logo-plate { display: inline-block; background: var(--color-cream); border-radius: 12px; padding: 8px 14px; }
+.logo-plate img { height: 56px; width: auto; }
+.about__logo { background: var(--color-cream); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-md); }
+.about__logo img { width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .logo__img { height: 44px; }
+  .nav { background: var(--color-cream); border-bottom-color: rgba(34, 36, 35, 0.14); }
+  .header .nav__link { border-bottom-color: rgba(34, 36, 35, 0.12); }
+}
+
+.footer__tagline {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin: 6px 0 10px;
+}
