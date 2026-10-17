@@ -25,7 +25,9 @@
 
     /* Botón grande y con foco bien visible para manejar con el control remoto */
     .btn {
-      display: inline-block;
+      display: block;
+      max-width: 520px;
+      margin: 0 auto 26px;
       background: #d24619;
       color: #fff;
       font-size: 2.2rem;
@@ -73,10 +75,11 @@
   <p class="tagline">Conexión &amp; Seguridad Integral</p>
 
   <h1>Descargá la app</h1>
-  <p class="version">Versión 8.9.1 para Android</p>
+  <p class="version">Elegí la app que querés instalar</p>
 
-  <!-- El botón apunta a /apk, que redirige al archivo (ver archivo _redirects en la raíz) -->
-  <a id="dl" class="btn" href="/apk">DESCARGAR</a>
+  <!-- Cada botón apunta a un atajo que redirige al archivo (ver archivo _redirects en la raíz) -->
+  <a id="dl" class="btn" href="/futurtv">FUTURTV</a>
+  <a class="btn" href="/flujo">FLUJO</a>
 
   <p id="aviso" class="aviso">
     Este dispositivo no parece Android. Abrí esta página desde tu TV, TV Box, tablet o celular Android.
@@ -85,7 +88,7 @@
   <div class="pasos">
     <h2>Cómo instalarla</h2>
     <ol>
-      <li>Presioná <strong>OK</strong> en el botón DESCARGAR.</li>
+      <li>Presioná <strong>OK</strong> en la app que querés instalar.</li>
       <li>Si el equipo lo pide, permití <strong>"Instalar apps desconocidas"</strong> para este navegador.</li>
       <li>Abrí el archivo descargado y elegí <strong>Instalar</strong>.</li>
     </ol>
