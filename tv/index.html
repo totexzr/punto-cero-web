@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Descargar app | Punto Cero</title>
+  <!-- Página liviana y sin dependencias externas, pensada para navegadores de TV y control remoto -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #1c1e1d;
+      color: #f4f1e8;
+      line-height: 1.5;
+      text-align: center;
+      padding: 4vh 5vw;
+    }
+    .brand { font-size: 2.2rem; font-weight: 800; letter-spacing: 2px; }
+    .brand span { color: #e4501e; }
+    .tagline { color: #b8b4a7; font-size: 1.1rem; margin-bottom: 4vh; }
+    h1 { font-size: 2.6rem; margin-bottom: 1.5vh; }
+    .version { color: #b8b4a7; font-size: 1.3rem; margin-bottom: 4vh; }
+
+    /* Botón grande y con foco bien visible para manejar con el control remoto */
+    .btn {
+      display: inline-block;
+      background: #d24619;
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 28px 60px;
+      border-radius: 16px;
+      border: 6px solid transparent;
+    }
+    .btn:focus, .btn:hover {
+      background: #e4501e;
+      border-color: #efece1;
+      outline: none;
+    }
+
+    .aviso {
+      display: none;
+      background: #2b2e2c;
+      border: 2px solid #e4501e;
+      border-radius: 12px;
+      max-width: 720px;
+      margin: 3vh auto 0;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+    }
+
+    .pasos {
+      max-width: 720px;
+      margin: 5vh auto 0;
+      text-align: left;
+      background: #232625;
+      border-radius: 16px;
+      padding: 24px 32px;
+      font-size: 1.3rem;
+    }
+    .pasos h2 { font-size: 1.5rem; margin-bottom: 12px; }
+    .pasos ol { padding-left: 1.4em; }
+    .pasos li { margin-bottom: 10px; }
+    .ayuda { margin-top: 4vh; font-size: 1.1rem; color: #b8b4a7; }
+    .ayuda a { color: #e4501e; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="brand">PUNTO<span>CERO</span></div>
+  <p class="tagline">Conexión &amp; Seguridad Integral</p>
+
+  <h1>Descargá la app</h1>
+  <p class="version">Versión 8.9.1 para Android</p>
+
+  <!-- El botón apunta a /apk, que redirige al archivo (ver archivo _redirects en la raíz) -->
+  <a id="dl" class="btn" href="/apk">DESCARGAR</a>
+
+  <p id="aviso" class="aviso">
+    Este dispositivo no parece Android. Abrí esta página desde tu TV, TV Box, tablet o celular Android.
+  </p>
+
+  <div class="pasos">
+    <h2>Cómo instalarla</h2>
+    <ol>
+      <li>Presioná <strong>OK</strong> en el botón DESCARGAR.</li>
+      <li>Si el equipo lo pide, permití <strong>"Instalar apps desconocidas"</strong> para este navegador.</li>
+      <li>Abrí el archivo descargado y elegí <strong>Instalar</strong>.</li>
+    </ol>
+  </div>
+
+  <p class="ayuda">
+    ¿Necesitás ayuda? Escribinos por
+    <a href="https://wa.me/543782460914" target="_blank" rel="noopener">WhatsApp</a>.
+  </p>
+
+  <script>
+    // Deja el botón seleccionado para que alcance con presionar OK en el control remoto
+    try {
+      document.getElementById('dl').focus();
+      if (!/Android/i.test(navigator.userAgent)) {
+        document.getElementById('aviso').style.display = 'block';
+      }
+    } catch (e) { /* sin JS la página sigue funcionando */ }
+  </script>
+</body>
+</html>
